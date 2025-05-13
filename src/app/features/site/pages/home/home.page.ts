@@ -3,16 +3,14 @@ import { toSignal } from "@angular/core/rxjs-interop";
 import { MatIcon } from "@angular/material/icon";
 import { UseClientSiteService } from "../../services";
 import { UseClientProductService } from "@features/product/services";
-import { GallaryImageProductCardComponent } from "@features/product/components";
 import { UseClientCategoryProductsService } from "@features/category-products/services";
-import { CardCartegoryProductsComponent } from "@features/category-products/components";
 import { HeroComponent } from "../../../../shared/components/hero/hero.component"; 
 
 
 @Component({
     selector: "home-page",
     templateUrl: "./home.page.html",
-    imports: [GallaryImageProductCardComponent, CardCartegoryProductsComponent, HeroComponent],
+    imports: [HeroComponent],
 })
 export class HomePage {
     private useClientSiteService = inject(UseClientSiteService);
