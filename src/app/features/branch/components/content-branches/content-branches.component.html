@@ -1,0 +1,19 @@
+@let branchesLocal = branches();
+@defer (when branchesLocal) {
+  @if (branchesLocal) {
+    @if (branchesLocal.data.length > 0) {
+      
+        <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 auto-center">
+
+          @for (branch of branchesLocal.data; track branch.id) {
+              <app-card-brach [branch]="branch"></app-card-brach>
+          }
+        </ul>
+
+      
+    }
+  }
+} @placeholder {
+  <div class="row h-10"></div>
+}
+
