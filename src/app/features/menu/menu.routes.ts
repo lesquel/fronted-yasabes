@@ -15,7 +15,7 @@ export const menuRoutes: Routes = [
             {
                 path: menuRoutesConfig.children.detail.path,
                 component: MenuPage,
-                data: { renderMode: 'ssr' }
+                data: { renderMode: 'client' }
             }
         ]
     }
