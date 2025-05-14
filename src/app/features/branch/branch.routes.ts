@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { BranchesPage, BranchPage } from './pages';
 import { branchRoutesConfig } from './config';
 import { BranchLayout } from './branch.layout';
+import { RenderMode } from '@angular/ssr';
 
 export const branchRoutes: Routes = [
   {
@@ -15,9 +16,6 @@ export const branchRoutes: Routes = [
       {
         path: branchRoutesConfig.children.detail.path,
         component: BranchPage,
-        data: {
-          renderMode: 'server',
-        },
       },
     ],
   },
